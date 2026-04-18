@@ -25,9 +25,9 @@ const closeMenu = (): void => {
   <header class="sticky top-0 z-30 border-b border-black/5 bg-white/80 backdrop-blur dark:border-white/10 dark:bg-slate-950/80">
     <div class="container-shell flex items-center justify-between gap-4 py-4">
       <RouterLink to="/" class="flex items-center gap-3" @click="closeMenu">
-        <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-500 text-lg font-bold text-white shadow-lg shadow-emerald-500/30">RS</div>
+        <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-500 text-lg font-bold text-white shadow-lg shadow-emerald-500/30">RB</div>
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600 dark:text-emerald-300">Recipe Studio</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600 dark:text-emerald-300">Recipe Book</p>
           <p class="text-xs text-slate-500 dark:text-slate-400">Curated cooking experiences</p>
         </div>
       </RouterLink>
