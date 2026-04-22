@@ -44,8 +44,10 @@ const closeMenu = (): void => {
           v-for="link in links"
           :key="link.to"
           :to="link.to"
-          class="rounded-full px-4 py-2 text-sm font-medium transition hover:bg-slate-100 dark:hover:bg-slate-800"
-          :class="route.path === link.to ? 'bg-slate-900 text-white dark:bg-white dark:text-slate-900' : 'text-slate-600 dark:text-slate-300'"
+          class="action-button text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+          :class="route.path === link.to
+            ? 'bg-slate-900 text-white dark:bg-white dark:text-slate-900'
+            : ''"
         >
           {{ link.label }}
         </RouterLink>
@@ -68,9 +70,9 @@ const closeMenu = (): void => {
         <RouterLink
           v-if="!sessionStore.isAuthenticated"
           to="/login"
-          class="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:-translate-y-0.5 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+          class="action-button border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
         >
-          Sign In
+          Log In
         </RouterLink>
 
         <RouterLink
@@ -105,7 +107,7 @@ const closeMenu = (): void => {
           class="rounded-2xl bg-slate-900 px-4 py-3 text-sm font-medium text-white dark:bg-white dark:text-slate-900"
           @click="closeMenu"
         >
-          Sign In
+          Log In
         </RouterLink>
 
         <RouterLink

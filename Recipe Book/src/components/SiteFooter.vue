@@ -1,46 +1,41 @@
 <template>
-  <footer class="bg-black text-white">
+  <footer class="border-t border-slate-200 bg-white text-slate-900 dark:border-slate-800 dark:bg-slate-950 dark:text-white">
     <div class="w-full">
-      
-      <!-- Main content -->
-      <div class="flex flex-col items-center justify-center px-6 py-10">
-        <div class="lg:col-span-5">
-          <h2 class="text-5xl text-center font-bold">Recipe Book</h2>
+      <div class="flex flex-col items-center justify-center px-6 py-10 sm:px-8 lg:px-12">
+        <div>
+          <h2 class="text-center text-3xl font-bold sm:text-4xl lg:text-5xl">
+            Recipe Book
+          </h2>
 
-          <p class="mt-6 text-gray-300 max-w-[600px] text-center pb-[25px]">
-           Discover, cook, and share delicious recipes from around the world with Recipe Book.
+          <p class="mt-6 max-w-[600px] pb-[25px] text-center text-sm text-slate-600 sm:text-base dark:text-slate-300">
+            Discover, cook, and share delicious recipes from around the world with Recipe Book.
           </p>
         </div>
-        
-        <!-- Social icons -->
-        <div class="flex flex-wrap items-center justify-center gap-10">
+
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 lg:gap-10">
           <a
             v-for="item in socialLinks"
             :key="item.name"
             :href="item.href"
-            class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black transition hover:scale-110 hover:bg-gray-200"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-slate-800 transition hover:scale-110 hover:bg-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700"
           >
-            <component :is="item.icon" class="h-7 w-7" />
+            <component :is="item.icon" class="h-6 w-6" />
           </a>
         </div>
 
-        <!-- Navigation -->
-        <ul class="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-md text-gray-300">
+        <ul class="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-sm text-slate-600 sm:gap-x-10 sm:text-base dark:text-slate-300">
           <li v-for="link in navLinks" :key="link.name">
-            <a href="#" class="hover:text-white transition">
+            <a :href="link.href" class="transition hover:text-slate-900 dark:hover:text-white">
               {{ link.name }}
             </a>
           </li>
         </ul>
-
       </div>
 
-      <!-- Bottom bar -->
-      <div class="bg-black border-t border-gray-700 py-5 text-center text-gray-300">
+      <div class="border-t border-slate-200 py-5 text-center text-sm text-slate-600 dark:border-slate-800 dark:text-slate-300">
         Copyright ©2026; Designed by
-        <span class="font-semibold text-white">Nimmitha</span>
+        <span class="font-semibold text-slate-900 dark:text-white">Nimmitha</span>
       </div>
-
     </div>
   </footer>
 </template>
